@@ -3,12 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linear Gradient Border</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Share</title>
   </head>
   <body>
-    <div class="card">
-      <div class="child-card"></div>
+    <div>
+      <h1>Hellp evryone</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sit
+        consequatur quisquam nobis quaerat voluptas velit maxime quod quas optio
+        deserunt necessitatibus, labore autem, eveniet, vero quis facilis omnis
+        iste!
+      </p>
     </div>
+    <button onclick="sharePage()">Share</button>
+    <script>
+      async function sharePage() {
+        await navigator.share({
+          title: document.title,
+          url: window.location.href,
+        });
+      }
+    </script>
   </body>
 </html>
